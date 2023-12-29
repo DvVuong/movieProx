@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+        <array key="Quicksand-SemiBold.ttf">
+            <string>Quicksand-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseTvShowViewController" customModule="Moffy" customModuleProvider="target">
+            <connections>
+                <outlet property="generTvShowCollectionView" destination="Fet-za-qfB" id="Doc-BI-bBj"/>
+                <outlet property="nextButton" destination="Lcp-dr-l3P" id="zRh-NX-OUd"/>
+                <outlet property="skipButton" destination="kpt-vV-Pml" id="GJG-h6-Qbh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6L-ql-fRy">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="jlH-eH-jcW" userLabel="BG">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpt-vV-Pml">
+                            <rect key="frame" x="306" y="75" width="55" height="34"/>
+                            <color key="tintColor" name="#ACACAC"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                <fontDescription key="titleFontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapSkipButton:" destination="-1" eventType="touchUpInside" id="LFs-XL-2ne"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your preferred TV Show type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-DX-z76">
+                            <rect key="frame" x="10.666666666666657" y="117.00000000000001" width="372" height="27.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="22"/>
+                            <color key="textColor" name="#FDFDFD"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap once on your favourite genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-OF-h2L">
+                            <rect key="frame" x="85.000000000000014" y="152.66666666666666" width="223.33333333333337" height="17.666666666666657"/>
+                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                            <color key="textColor" name="#EFEFEF"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-8G-cx3">
+                            <rect key="frame" x="185" y="174.33333333333334" width="23" height="17.666666666666657"/>
+                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                            <color key="textColor" name="#EFEFEF"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-dr-l3P">
+                            <rect key="frame" x="16" y="719" width="361" height="57"/>
+                            <color key="backgroundColor" name="#ACACAC"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="xlH-Ve-NED"/>
+                            </constraints>
+                            <color key="tintColor" name="#FDFDFD"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="NEXT">
+                                <fontDescription key="titleFontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="22"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didtapNextButton:" destination="-1" eventType="touchUpInside" id="wAi-Aj-Ssv"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All good ! Press “next” to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8X-L6-hM1">
+                            <rect key="frame" x="100.00000000000001" y="688" width="193.33333333333337" height="15"/>
+                            <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="12"/>
+                            <color key="textColor" name="#BDBDBD"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fet-za-qfB">
+                            <rect key="frame" x="38" y="224" width="317" height="412"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VkW-fF-SjV">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="cAc-8G-cx3" firstAttribute="top" secondItem="yTB-OF-h2L" secondAttribute="bottom" constant="4" id="0LK-V8-1qr"/>
+                        <constraint firstAttribute="trailing" secondItem="jlH-eH-jcW" secondAttribute="trailing" id="CmM-HZ-Mdc"/>
+                        <constraint firstItem="Fet-za-qfB" firstAttribute="top" secondItem="cAc-8G-cx3" secondAttribute="bottom" constant="32" id="FNn-Q1-IPU"/>
+                        <constraint firstItem="v8X-L6-hM1" firstAttribute="centerX" secondItem="q6L-ql-fRy" secondAttribute="centerX" id="IRq-qM-gyV"/>
+                        <constraint firstItem="cAc-8G-cx3" firstAttribute="centerX" secondItem="q6L-ql-fRy" secondAttribute="centerX" id="JgU-X5-Zyt"/>
+                        <constraint firstItem="V4w-DX-z76" firstAttribute="top" secondItem="kpt-vV-Pml" secondAttribute="bottom" constant="8" id="MzS-69-5CY"/>
+                        <constraint firstAttribute="trailing" secondItem="V4w-DX-z76" secondAttribute="trailing" constant="10.5" id="QaY-s8-Kmy"/>
+                        <constraint firstAttribute="trailing" secondItem="Lcp-dr-l3P" secondAttribute="trailing" constant="16" id="SwN-U4-u8n"/>
+                        <constraint firstAttribute="trailing" secondItem="kpt-vV-Pml" secondAttribute="trailing" constant="32" id="YYK-Ce-3oa"/>
+                        <constraint firstAttribute="bottom" secondItem="jlH-eH-jcW" secondAttribute="bottom" id="c3u-cQ-ZXH"/>
+                        <constraint firstItem="Lcp-dr-l3P" firstAttribute="top" secondItem="v8X-L6-hM1" secondAttribute="bottom" constant="16" id="gwd-5z-0Vh"/>
+                        <constraint firstItem="jlH-eH-jcW" firstAttribute="top" secondItem="q6L-ql-fRy" secondAttribute="top" id="l7q-DD-VYa"/>
+                        <constraint firstItem="jlH-eH-jcW" firstAttribute="leading" secondItem="q6L-ql-fRy" secondAttribute="leading" id="mCm-QC-RR6"/>
+                        <constraint firstItem="V4w-DX-z76" firstAttribute="leading" secondItem="q6L-ql-fRy" secondAttribute="leading" constant="10.5" id="mrS-OV-NnF"/>
+                        <constraint firstAttribute="trailing" secondItem="Fet-za-qfB" secondAttribute="trailing" constant="38" id="poJ-W0-ejz"/>
+                        <constraint firstItem="yTB-OF-h2L" firstAttribute="top" secondItem="V4w-DX-z76" secondAttribute="bottom" constant="8" id="qpr-Wd-gOU"/>
+                        <constraint firstItem="v8X-L6-hM1" firstAttribute="top" secondItem="Fet-za-qfB" secondAttribute="bottom" constant="52" id="ti9-sF-aIo"/>
+                        <constraint firstItem="Fet-za-qfB" firstAttribute="leading" secondItem="q6L-ql-fRy" secondAttribute="leading" constant="38" id="yHJ-o2-oQm"/>
+                        <constraint firstItem="Lcp-dr-l3P" firstAttribute="leading" secondItem="q6L-ql-fRy" secondAttribute="leading" constant="16" id="yTx-yX-qbN"/>
+                        <constraint firstItem="yTB-OF-h2L" firstAttribute="centerX" secondItem="q6L-ql-fRy" secondAttribute="centerX" id="zcy-5h-7aT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kpt-vV-Pml" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="C5p-he-QJw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Lcp-dr-l3P" secondAttribute="bottom" constant="42" id="KHx-8y-EFB"/>
+                <constraint firstAttribute="bottom" secondItem="q6L-ql-fRy" secondAttribute="bottom" id="Om9-41-cA3"/>
+                <constraint firstItem="q6L-ql-fRy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j83-QQ-bU1"/>
+                <constraint firstAttribute="trailing" secondItem="q6L-ql-fRy" secondAttribute="trailing" id="vpA-aV-ebx"/>
+                <constraint firstItem="q6L-ql-fRy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zqb-XS-6J0"/>
+            </constraints>
+            <point key="canvasLocation" x="-164.12213740458014" y="-37.323943661971832"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BG" width="375" height="812"/>
+        <namedColor name="#ACACAC">
+            <color red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#BDBDBD">
+            <color red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#EFEFEF">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#FDFDFD">
+            <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

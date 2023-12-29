@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BottomCreatePlanCVC" customModule="Moffy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="236"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="446" height="236"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-IV-wJx">
+                        <rect key="frame" x="0.0" y="186" width="446" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="fgY-YS-mYU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="22"/>
+                        <color key="tintColor" name="#FDFDFD"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Done"/>
+                        <connections>
+                            <action selector="didTapDoneButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="u4n-uA-OqG"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-BG-1WB">
+                        <rect key="frame" x="0.0" y="0.0" width="446" height="162"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-zo-rNC">
+                                <rect key="frame" x="16" y="16" width="430" height="17.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="-" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-Ai-7nZ">
+                                <rect key="frame" x="16" y="33.666666666666671" width="430" height="128.33333333333331"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cz2-Ai-7nZ" secondAttribute="trailing" id="20F-7U-Ntw"/>
+                            <constraint firstItem="Cz2-Ai-7nZ" firstAttribute="top" secondItem="rm6-zo-rNC" secondAttribute="bottom" id="AFB-U5-7Py"/>
+                            <constraint firstItem="rm6-zo-rNC" firstAttribute="top" secondItem="gSL-BG-1WB" secondAttribute="top" constant="16" id="RA4-9j-Y96"/>
+                            <constraint firstAttribute="bottom" secondItem="Cz2-Ai-7nZ" secondAttribute="bottom" id="Yqo-R5-oKE"/>
+                            <constraint firstItem="rm6-zo-rNC" firstAttribute="leading" secondItem="gSL-BG-1WB" secondAttribute="leading" constant="16" id="cin-dy-Vsg"/>
+                            <constraint firstAttribute="trailing" secondItem="rm6-zo-rNC" secondAttribute="trailing" id="i4f-BP-xjr"/>
+                            <constraint firstItem="Cz2-Ai-7nZ" firstAttribute="leading" secondItem="gSL-BG-1WB" secondAttribute="leading" constant="16" id="z6J-ZH-lwy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Zfp-IV-wJx" firstAttribute="top" secondItem="gSL-BG-1WB" secondAttribute="bottom" constant="24" id="BeR-uL-uh1"/>
+                <constraint firstAttribute="bottom" secondItem="Zfp-IV-wJx" secondAttribute="bottom" id="Bm1-3p-KCH"/>
+                <constraint firstAttribute="trailing" secondItem="Zfp-IV-wJx" secondAttribute="trailing" id="Epi-FV-ywp"/>
+                <constraint firstAttribute="trailing" secondItem="gSL-BG-1WB" secondAttribute="trailing" id="MS8-Np-f61"/>
+                <constraint firstItem="Zfp-IV-wJx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YHP-1Q-CsZ"/>
+                <constraint firstItem="gSL-BG-1WB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bIw-zk-Rh5"/>
+                <constraint firstItem="gSL-BG-1WB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s3D-Yu-pbj"/>
+            </constraints>
+            <size key="customSize" width="446" height="236"/>
+            <connections>
+                <outlet property="doneButton" destination="Zfp-IV-wJx" id="iWY-Kc-bGF"/>
+                <outlet property="noteTextView" destination="Cz2-Ai-7nZ" id="KIk-y3-4gp"/>
+                <outlet property="subView" destination="gSL-BG-1WB" id="768-Zb-IC3"/>
+            </connections>
+            <point key="canvasLocation" x="180.15267175572518" y="52.816901408450704"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="#FDFDFD">
+            <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

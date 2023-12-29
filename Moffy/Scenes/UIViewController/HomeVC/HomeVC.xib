@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="Moffy" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="yKG-EP-4Lu" id="gPq-w8-FT5"/>
+                <outlet property="settingButton" destination="V8b-Lu-oot" id="UIz-iV-txd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="PHM-o4-YqR">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kak-hI-om7" userLabel="ViewTop">
+                    <rect key="frame" x="0.0" y="75" width="393" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggest Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0Y-jP-uNO">
+                            <rect key="frame" x="16" y="3" width="139" height="28"/>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="22"/>
+                            <color key="textColor" name="#FDFDFD"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8b-Lu-oot">
+                            <rect key="frame" x="353" y="5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="V8b-Lu-oot" secondAttribute="height" multiplier="1:1" id="gQ4-JB-T7g"/>
+                                <constraint firstAttribute="width" constant="24" id="uuc-06-Cma"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_Setting"/>
+                            <connections>
+                                <action selector="didTapSettingButton:" destination="-1" eventType="touchUpInside" id="SL2-kN-vfd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="W0Y-jP-uNO" firstAttribute="leading" secondItem="kak-hI-om7" secondAttribute="leading" constant="16" id="QjV-dj-GSf"/>
+                        <constraint firstAttribute="trailing" secondItem="V8b-Lu-oot" secondAttribute="trailing" constant="16" id="W8q-dA-bwg"/>
+                        <constraint firstItem="V8b-Lu-oot" firstAttribute="centerY" secondItem="kak-hI-om7" secondAttribute="centerY" id="XEf-Vh-4Q5"/>
+                        <constraint firstAttribute="height" constant="34" id="gkS-FZ-T1v"/>
+                        <constraint firstItem="W0Y-jP-uNO" firstAttribute="centerY" secondItem="kak-hI-om7" secondAttribute="centerY" id="p7Z-TT-Cx2"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yKG-EP-4Lu">
+                    <rect key="frame" x="0.0" y="125" width="393" height="641"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XnW-hU-dof">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yKG-EP-4Lu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0Ct-mm-7Ou"/>
+                <constraint firstItem="PHM-o4-YqR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="22b-2v-rYo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yKG-EP-4Lu" secondAttribute="trailing" id="OSf-XV-0VY"/>
+                <constraint firstItem="kak-hI-om7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="16" id="RLk-G1-0e8"/>
+                <constraint firstAttribute="trailing" secondItem="kak-hI-om7" secondAttribute="trailing" id="ShV-E9-1fg"/>
+                <constraint firstItem="yKG-EP-4Lu" firstAttribute="top" secondItem="kak-hI-om7" secondAttribute="bottom" constant="16" id="TFu-Rz-XF8"/>
+                <constraint firstAttribute="bottom" secondItem="PHM-o4-YqR" secondAttribute="bottom" id="V2K-Ro-64P"/>
+                <constraint firstItem="kak-hI-om7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VdG-P2-twE"/>
+                <constraint firstAttribute="trailing" secondItem="PHM-o4-YqR" secondAttribute="trailing" id="bIK-L9-5Ug"/>
+                <constraint firstItem="PHM-o4-YqR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="h2b-Mf-BAZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yKG-EP-4Lu" secondAttribute="bottom" constant="52" id="mFC-04-q4M"/>
+            </constraints>
+            <point key="canvasLocation" x="-167.17557251908397" y="-37.323943661971832"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BG" width="375" height="812"/>
+        <image name="ic_Setting" width="24" height="24"/>
+        <namedColor name="#FDFDFD">
+            <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

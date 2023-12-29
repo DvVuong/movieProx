@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePlanVC" customModule="Moffy" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="k9N-r7-50t" id="VN1-NH-Tym"/>
+                <outlet property="collectionView" destination="IgS-JR-Pfn" id="mSu-ZM-1da"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-9T-hHm">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQZ-LF-EFa" userLabel="ViewTop">
+                    <rect key="frame" x="0.0" y="75" width="393" height="29"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9N-r7-50t">
+                            <rect key="frame" x="10" y="0.0" width="24" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="nmR-Hv-Plj"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="arrow-left"/>
+                            <connections>
+                                <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="R5a-yK-oFT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpJ-Iq-1WG">
+                            <rect key="frame" x="163" y="4" width="78" height="21.333333333333332"/>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                            <color key="textColor" name="#FDFDFD"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="k9N-r7-50t" firstAttribute="top" secondItem="eQZ-LF-EFa" secondAttribute="top" id="CNN-cx-EX8"/>
+                        <constraint firstAttribute="height" constant="29" id="F3b-CW-cVH"/>
+                        <constraint firstItem="k9N-r7-50t" firstAttribute="leading" secondItem="eQZ-LF-EFa" secondAttribute="leading" constant="10" id="MMT-E2-J2U"/>
+                        <constraint firstItem="dpJ-Iq-1WG" firstAttribute="centerX" secondItem="eQZ-LF-EFa" secondAttribute="centerX" constant="5.5" id="Ogw-OJ-55l"/>
+                        <constraint firstAttribute="bottom" secondItem="k9N-r7-50t" secondAttribute="bottom" id="cGg-dM-rod"/>
+                        <constraint firstItem="dpJ-Iq-1WG" firstAttribute="centerY" secondItem="eQZ-LF-EFa" secondAttribute="centerY" id="fvC-7Y-dQ2"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-JR-Pfn">
+                    <rect key="frame" x="16" y="128" width="361" height="666"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ur7-ZF-X6F">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IgS-JR-Pfn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2KL-1t-WMG"/>
+                <constraint firstItem="cBn-9T-hHm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6gH-4z-7x2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eQZ-LF-EFa" secondAttribute="trailing" id="8TE-Hl-Fy6"/>
+                <constraint firstItem="cBn-9T-hHm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lqj-AW-54W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IgS-JR-Pfn" secondAttribute="trailing" constant="16" id="Lrk-mg-3ej"/>
+                <constraint firstAttribute="trailing" secondItem="cBn-9T-hHm" secondAttribute="trailing" id="Zmy-di-rmr"/>
+                <constraint firstItem="eQZ-LF-EFa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="16" id="bDh-nB-ySM"/>
+                <constraint firstAttribute="bottom" secondItem="cBn-9T-hHm" secondAttribute="bottom" id="bhv-l7-Nkb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IgS-JR-Pfn" secondAttribute="bottom" constant="24" id="pcy-gj-DLC"/>
+                <constraint firstItem="eQZ-LF-EFa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tMZ-2z-aSm"/>
+                <constraint firstItem="IgS-JR-Pfn" firstAttribute="top" secondItem="eQZ-LF-EFa" secondAttribute="bottom" constant="24" id="tpD-e7-kBF"/>
+            </constraints>
+            <point key="canvasLocation" x="-164.12213740458014" y="-38.028169014084511"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BG" width="375" height="812"/>
+        <image name="arrow-left" width="24" height="24.333333969116211"/>
+        <namedColor name="#FDFDFD">
+            <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
